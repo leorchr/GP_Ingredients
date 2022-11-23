@@ -28,7 +28,9 @@ public class InteractionHelper : MonoBehaviour
             else if (interaction == InteractionType.FailedAction)
             {
                 interactionCue.GetComponentInChildren<TextMeshProUGUI>().text = failedText;
-            }else{
+            }
+            else
+            {
                 interactionCue.GetComponentInChildren<TextMeshProUGUI>().text = interactionText;
             }
         }
