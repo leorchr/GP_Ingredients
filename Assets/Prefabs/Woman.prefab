@@ -694,7 +694,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9abd531dc805c984494c5ef16efaeff6, type: 2}
+  - {fileID: 2100000, guid: bbb3a29423c5fec47aadfa9ffe376067, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1537,6 +1537,18 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 561de0fa-aaaa-43e5-abdf-d61a8c30cf44
     m_ActionName: Player/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1a1506cd-6f2d-468b-a73a-21deeb162fc8
+    m_ActionName: Menu/Switch[/Keyboard/rightArrow,/Keyboard/leftArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a78bf29e-b907-40e5-a58f-21ce1908c4ae
+    m_ActionName: Menu/Go[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 85796d16-ef36-4811-9dca-b61d1b861e3d
+    m_ActionName: Player/InventorySwitch[/Keyboard/tab]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1554,10 +1566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179336769c2914d419661f52b3e2408d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usableItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  hand: {fileID: 0}
+  usableItems: []
+  hand: {fileID: 5635279384269861401}
 --- !u!54 &5827981051850980579
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1585,9 +1595,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.29707533
-  m_Height: 1.8290582
+  m_Height: 1.5833237
   m_Direction: 1
-  m_Center: {x: -0.037763476, y: 0.90221775, z: 0}
+  m_Center: {x: -0.037763476, y: 1.0250796, z: 0.000000023566567}
 --- !u!95 &5234601054610720881
 Animator:
   serializedVersion: 4
