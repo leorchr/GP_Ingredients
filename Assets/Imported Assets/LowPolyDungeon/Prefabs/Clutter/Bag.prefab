@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 5200681163899974111}
   - component: {fileID: 5200681163899007775}
   - component: {fileID: 5200681163900939742}
+  - component: {fileID: 333602200}
+  - component: {fileID: 333602201}
   m_Layer: 0
   m_Name: Bag
-  m_TagString: Untagged
+  m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -32,8 +34,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5200681163899974111
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -95,6 +97,37 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c97a961f8ab237a4785b57abd59514f4, type: 3}
+--- !u!135 &333602200
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5200681163900939743}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.7
+  m_Center: {x: -0.006137113, y: 0.3876081, z: 0.0000018955183}
+--- !u!114 &333602201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5200681163900939743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0619b75c168824c9bf2eeebd9b789e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionType: 2
+  onlyOnce: 1
+  requiredItem: {fileID: 0}
+  waitForObject: 0
+  key: {fileID: 11400000, guid: b205358823aa3d544894576ddd858f6c, type: 2}
+  bagPrefab: {fileID: 5200681163900939743}

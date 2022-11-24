@@ -34,13 +34,16 @@ public class Inventory : MonoBehaviour
     }
     public void PickupKeyItem(KeyItemData keyItem)
     {
-        if (!_foundKeys.Contains(keyItem))
+        if (isPickable())
         {
-            GameObject keyInstance = Instantiate(keyItem.prefab, hand);
-            _foundKeys.Add(keyItem);
-            usableItems.Add(keyInstance.GetComponent<KeyItem>());
-            //Utilise le dernier trouvé
-            HoldItem(usableItems.Count-1);
+            if (!_foundKeys.Contains(keyItem))
+            {
+                GameObject keyInstance = Instantiate(keyItem.prefab, hand);
+                _foundKeys.Add(keyItem);
+                usableItems.Add(keyInstance.GetComponent<KeyItem>());
+                //Utilise le dernier trouvé
+                HoldItem(usableItems.Count - 1);
+            }
         }
     }
 
@@ -90,5 +93,11 @@ public class Inventory : MonoBehaviour
         //Empty ID means no necessary key item
         //true if the id is found in the list, false otherwise
         return key==null|| _foundKeys.Contains(key);
+    }
+
+    public bool isPickable()
+    {
+        Debug.Log(usableItems.Count == 0);
+        return usableItems.Count == 0;
     }
 }
