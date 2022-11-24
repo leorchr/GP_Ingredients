@@ -12,8 +12,21 @@ public enum InteractionType
     Pickup
 }
 
+
 public class PlayerInteractionAnim : MonoBehaviour
 {
+    public GameObject bookStory;
+
+    public void Update()
+    {
+        if (FindObjectOfType<Book>().active == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                bookStory.SetActive(false);
+            }
+        }
+    }
     private Animator _animator;
 
     public static bool AnimationInProgress = false;
