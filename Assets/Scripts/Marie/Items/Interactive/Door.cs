@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Door : Interactive
 {
+    public Animator animator;
     public override void OnInteraction()
     {
-        //trigger animation
+        Inventory.Instance.RemoveFromInventory(requiredItem);
+
+        //start animation
+        animator.SetBool("doorOpen", true);
     }
 }
