@@ -13,6 +13,7 @@ public class PlayerInteraction : MonoBehaviour
     private KeyItem _possiblePickable;
     private Interactive _possibleInteractive;
 
+
     private void Start()
     {
         _anim = GetComponent<PlayerInteractionAnim>();
@@ -43,9 +44,12 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Pickup()
     {
-        _inventory.PickupKeyItem(_possiblePickable.data);
-        _possiblePickable.gameObject.SetActive(false);
-        SetInteraction(InteractionType.None);
+        if (_inventory.isPickable())
+        {
+            _inventory.PickupKeyItem(_possiblePickable.data);
+            _possiblePickable.gameObject.SetActive(false);
+            SetInteraction(InteractionType.None);
+        }
     }
 
     private void Interact()

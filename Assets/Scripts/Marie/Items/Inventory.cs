@@ -34,16 +34,13 @@ public class Inventory : MonoBehaviour
     }
     public void PickupKeyItem(KeyItemData keyItem)
     {
-        if (isPickable())
+        if (!_foundKeys.Contains(keyItem))
         {
-            if (!_foundKeys.Contains(keyItem))
-            {
-                GameObject keyInstance = Instantiate(keyItem.prefab, hand);
-                _foundKeys.Add(keyItem);
-                usableItems.Add(keyInstance.GetComponent<KeyItem>());
-                //Utilise le dernier trouvé
-                HoldItem(usableItems.Count - 1);
-            }
+            GameObject keyInstance = Instantiate(keyItem.prefab, hand);
+            _foundKeys.Add(keyItem);
+            usableItems.Add(keyInstance.GetComponent<KeyItem>());
+            //Utilise le dernier trouvé
+            HoldItem(usableItems.Count - 1);
         }
     }
 
