@@ -10726,7 +10726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3220789098340599353, guid: 5abc2fad5b101f84b881cc1043aac7c9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3220789098340768281, guid: 5abc2fad5b101f84b881cc1043aac7c9, type: 3}
       propertyPath: m_RootOrder
@@ -17086,10 +17086,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1037110856}
     m_Modifications:
-    - target: {fileID: 3220789098340599352, guid: 5abc2fad5b101f84b881cc1043aac7c9, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3220789098340599353, guid: 5abc2fad5b101f84b881cc1043aac7c9, type: 3}
       propertyPath: m_Name
       value: Bag4
@@ -53481,6 +53477,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portcullis_Wood
       objectReference: {fileID: 0}
+    - target: {fileID: 6558975445304798700, guid: da389f98d36554042874cf88abbff5ef, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656927238323103413, guid: da389f98d36554042874cf88abbff5ef, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: da389f98d36554042874cf88abbff5ef, type: 3}
@@ -53489,6 +53493,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5786555726001780566, guid: da389f98d36554042874cf88abbff5ef, type: 3}
   m_PrefabInstance: {fileID: 1540307225}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1540307227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6558975445304798700, guid: da389f98d36554042874cf88abbff5ef, type: 3}
+  m_PrefabInstance: {fileID: 1540307225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1540307228
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540307227}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a7286b61f23c1e43834cc8804ee02cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1540652658
 PrefabInstance:
   m_ObjectHideFlags: 0
