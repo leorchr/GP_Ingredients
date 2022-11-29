@@ -94,7 +94,6 @@ public class Inventory : MonoBehaviour
 
     public bool isPickable()
     {
-        Debug.Log(usableItems.Count == 0);
         return usableItems.Count == 0;
     }
 }
