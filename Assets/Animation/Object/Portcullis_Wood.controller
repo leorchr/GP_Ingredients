@@ -70,9 +70,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+<<<<<<< Updated upstream
 =======
   m_AnimatorParameters: []
 >>>>>>> parent of dd0c3ea (Merge branch 'main' of https://github.com/leorchr/GP_Ingredients)
+=======
+>>>>>>> Stashed changes
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

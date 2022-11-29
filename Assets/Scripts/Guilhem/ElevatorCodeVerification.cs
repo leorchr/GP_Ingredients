@@ -1,18 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ElevatorCodeVerification : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int realNumber1, realNumber2, realNumber3, realNumber4;
+    public TMP_Text number1, number2, number3, number4;
+
+    public bool goodNumber1, goodNumber2, goodNumber3, goodNumber4;
+    public Animator harrow;
+
+    public void Update()
     {
-        
+        goodCode();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Start()
     {
-        
+        int.TryParse(number1.GetParsedText(), out realNumber1);
+        int.TryParse(number2.GetParsedText(), out realNumber2);
+        int.TryParse(number3.GetParsedText(), out realNumber3);
+        int.TryParse(number4.GetParsedText(), out realNumber4);
+    }
+
+    public void goodCode()
+    {
+        if(realNumber1 == 8)
+        {
+            goodNumber1 = true;
+        }
+
+        if (realNumber1 == 6)
+        {
+            goodNumber2 = true;
+        }
+
+        if (realNumber1 == 5)
+        {
+            goodNumber3 = true;
+        }
+
+        if (realNumber1 == 3)
+        {
+            goodNumber4 = true;
+        }
+
+        if(goodNumber1 && goodNumber2 && goodNumber3 && goodNumber4)
+        {
+            harrow.SetBool("OpeningOfTheHarrow", true);
+        }
     }
 }
