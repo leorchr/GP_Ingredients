@@ -10726,7 +10726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3220789098340599353, guid: 5abc2fad5b101f84b881cc1043aac7c9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3220789098340768281, guid: 5abc2fad5b101f84b881cc1043aac7c9, type: 3}
       propertyPath: m_RootOrder
@@ -17086,6 +17086,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1037110856}
     m_Modifications:
+    - target: {fileID: 3220789098340599352, guid: 5abc2fad5b101f84b881cc1043aac7c9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3220789098340599353, guid: 5abc2fad5b101f84b881cc1043aac7c9, type: 3}
       propertyPath: m_Name
       value: Bag4
@@ -48250,7 +48254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -1387, y: -351.30334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &980136708
