@@ -11,6 +11,8 @@ public class ElevatorCodeVerification : MonoBehaviour
     public bool goodNumber1, goodNumber2, goodNumber3, goodNumber4;
     public Animator harrow;
 
+    public GameObject elevatorCode;
+
     public void Update()
     {
         int.TryParse(number1.GetParsedText(), out realNumber1);
@@ -45,7 +47,7 @@ public class ElevatorCodeVerification : MonoBehaviour
 
         if(goodNumber1 && goodNumber2 && goodNumber3 && goodNumber4)
         {
-            Debug.Log("Trouvé !");
+            elevatorCode.SetActive(false);
             harrow.SetBool("OpeningOfTheHarrow", true);
         }
     }

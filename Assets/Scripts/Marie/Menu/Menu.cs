@@ -26,7 +26,7 @@ public class Menu : MonoBehaviour
     public void GoToGame()
     {
         PlayerPrefs.SetInt("Character",selectedCharacter?0:1);
-        SceneManager.LoadScene("Escape The Dungeon");
+        SceneManager.LoadScene(1);
     }
     
 }

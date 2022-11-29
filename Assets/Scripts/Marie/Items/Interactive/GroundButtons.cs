@@ -18,7 +18,7 @@ public class GroundButtons : Interactive
             if (button_check == 4)
             {
                 ironDoor = GameObject.Find("Portcullis_Wood");
-                Debug.Log("T'as réussi l'énigme");
+                ironDoor.GetComponent<Animator>().SetBool("DoorOpen", true);
             }
         }
     }

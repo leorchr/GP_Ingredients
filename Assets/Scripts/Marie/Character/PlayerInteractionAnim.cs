@@ -16,10 +16,12 @@ public enum InteractionType
 public class PlayerInteractionAnim : MonoBehaviour
 {
     public GameObject bookStory;
+    public GameObject thirdEnigma;
 
     public void Update()
     {
         BookGestion();
+        UIGestion();
     }
     private Animator _animator;
 
@@ -40,6 +42,15 @@ public class PlayerInteractionAnim : MonoBehaviour
             }
         }
     }
+    public void UIGestion()
+    {
+        thirdEnigma = GameObject.Find("ThirdEnigma");
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            thirdEnigma.SetActive(false);
+        }
+    }
+
 
     public void BookClose()
     {
