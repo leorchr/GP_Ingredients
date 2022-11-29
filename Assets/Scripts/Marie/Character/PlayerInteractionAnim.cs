@@ -19,13 +19,7 @@ public class PlayerInteractionAnim : MonoBehaviour
 
     public void Update()
     {
-        if (FindObjectOfType<Book>().active == true)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                bookStory.SetActive(false);
-            }
-        }
+        BookGestion();
     }
     private Animator _animator;
 
@@ -34,6 +28,22 @@ public class PlayerInteractionAnim : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
+    }
+
+    public void BookGestion()
+    {
+        if (FindObjectOfType<Book>().active == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                bookStory.SetActive(false);
+            }
+        }
+    }
+
+    public void BookClose()
+    {
+        bookStory.SetActive(false);
     }
 
     public void BeginAnimation()
