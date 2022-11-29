@@ -47,10 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66e151b63acd50745879262c23ee0e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionType: 2
-  onlyOnce: 1
-  requiredItem: {fileID: 0}
-  waitForObject: 0
+  interactionType: 1
+  onlyOnce: 0
+  requiredItem: {fileID: 11400000, guid: aa3923b1872c6a44698c085330dcd10f, type: 2}
+  waitForObject: 1
+  bag: {fileID: 11400000, guid: aa3923b1872c6a44698c085330dcd10f, type: 2}
 --- !u!135 &3654385797838093980
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -62,8 +63,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.43547475
-  m_Center: {x: 0, y: 3.1266252e-16, z: -0.10689902}
+  m_Radius: 0.28
+  m_Center: {x: 0, y: 3.1266252e-16, z: 0.5}
 --- !u!1001 &3703492801428382743
 PrefabInstance:
   m_ObjectHideFlags: 0

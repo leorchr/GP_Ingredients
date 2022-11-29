@@ -13,6 +13,7 @@ public class PlayerInteraction : MonoBehaviour
     private KeyItem _possiblePickable;
     private Interactive _possibleInteractive;
 
+
     private void Start()
     {
         _anim = GetComponent<PlayerInteractionAnim>();
@@ -44,6 +45,10 @@ public class PlayerInteraction : MonoBehaviour
     private void Pickup()
     {
         _inventory.PickupKeyItem(_possiblePickable.data);
+        if(_possiblePickable.gameObject.transform.parent.gameObject.transform.parent.name == "GoodButtons")
+        {
+            GroundButtons.button_check -= 1;
+        }
         _possiblePickable.gameObject.SetActive(false);
         SetInteraction(InteractionType.None);
     }
@@ -71,14 +76,17 @@ public class PlayerInteraction : MonoBehaviour
         {
             if (other.transform.CompareTag("Pickable"))
             {
-                SetInteraction(InteractionType.Pickup);
-                _possiblePickable = other.GetComponentInChildren<KeyItem>();
+                if (_inventory.isPickable())
+                {
+                    SetInteraction(InteractionType.Pickup);
+                    _possiblePickable = other.GetComponentInChildren<KeyItem>();
+                }
             }
             else if (other.transform.CompareTag("Interactive"))
             {
                 Interactive interactive = other.GetComponent<Interactive>();
                 //if interaction doesn't need key object or interaction key object is in inventory
-                bool hasRequiredItem = _inventory.IsItemFound(interactive.requiredItem);    
+                bool hasRequiredItem = _inventory.IsItemFound(interactive.requiredItem);
                 if (!interactive.waitForObject || hasRequiredItem)
                 {
                     _possibleInteractive = interactive;
