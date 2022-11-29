@@ -13,15 +13,12 @@ public class ElevatorCodeVerification : MonoBehaviour
 
     public void Update()
     {
-        goodCode();
-    }
-
-    public void Start()
-    {
         int.TryParse(number1.GetParsedText(), out realNumber1);
         int.TryParse(number2.GetParsedText(), out realNumber2);
         int.TryParse(number3.GetParsedText(), out realNumber3);
         int.TryParse(number4.GetParsedText(), out realNumber4);
+
+        goodCode();
     }
 
     public void goodCode()
@@ -31,23 +28,24 @@ public class ElevatorCodeVerification : MonoBehaviour
             goodNumber1 = true;
         }
 
-        if (realNumber1 == 6)
+        if (realNumber2 == 6)
         {
             goodNumber2 = true;
         }
 
-        if (realNumber1 == 5)
+        if (realNumber3 == 5)
         {
             goodNumber3 = true;
         }
 
-        if (realNumber1 == 3)
+        if (realNumber4 == 3)
         {
             goodNumber4 = true;
         }
 
         if(goodNumber1 && goodNumber2 && goodNumber3 && goodNumber4)
         {
+            Debug.Log("Trouvé !");
             harrow.SetBool("OpeningOfTheHarrow", true);
         }
     }
