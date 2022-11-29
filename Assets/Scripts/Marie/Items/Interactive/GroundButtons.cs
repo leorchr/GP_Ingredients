@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GroundButtons : Interactive
@@ -19,7 +18,6 @@ public class GroundButtons : Interactive
             if (button_check == 4)
             {
                 ironDoor = GameObject.Find("Portcullis_Wood");
-                ironDoor.GetComponent<Animator>().SetBool("DoorOpen", true);
                 Debug.Log("T'as réussi l'énigme");
             }
         }
