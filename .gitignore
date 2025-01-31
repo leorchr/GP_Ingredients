@@ -60,3 +60,6 @@ crashlytics-build.properties
 
 UserSettings/EditorUserSettings.asset
 Assets/Scenes/Level Design Test.unity
+
+.idea/
+*.vsconfig
