@@ -4,7 +4,6 @@ A game prototype where the player must solve 3 puzzles in different rooms. This 
 
 ## 🎮 Features
 - **Puzzle System**: Solve 3 unique puzzles across different rooms.
-- **Gameplay Ingredients**: Preconfigured levers, traps, and doors ready to use.
 - **Room Transitions**: Smooth progression between levels or areas.
 
 ## 📸 Screenshots
